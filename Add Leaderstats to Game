@@ -1,0 +1,13 @@
+1. Make a script inside of ServerScriptService
+2. Change the script name to leaderstats (ALL LOWERCASE)
+
+game.Players.PlayerAdded:Connect(function(Player)
+	local leaderstats = Instance.new("Folder")
+	leaderstats.Name = "leaderstats"
+	leaderstats.Parent = Player
+	
+	local Cash = Instance.new("IntValue")
+	Cash.Name = "Cash" --pick whatever you want
+	Cash.Value = 0 --pick any number
+	Cash.Parent = leaderstats
+end)
