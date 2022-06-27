@@ -1,0 +1,20 @@
+--------------------
+----INSTRUCTIONS----
+--------------------
+
+--Make a ScreenGUI inside of StarterGUI
+--Change name to “UI”
+--Insert text label
+--Set background transparency to “1”
+--Text size 60
+--Make a LocalScript
+
+-------------------
+-------SCRIPT-------
+--------------------
+local text = script.Parent.TextLabel
+
+for i = 50,1, -1 do
+	text.Text = "STARTING IN".. i
+wait(1)	
+end
