@@ -1,0 +1,26 @@
+--NO CANCOLIDE ON--
+
+local part = script.Parent
+
+while true do
+	part.BrickColor = BrickColor.new("Really red") -- changes the part to red
+	wait(1)
+	part.BrickColor = BrickColor.new("Really blue") -- changes the part to blue
+	wait(1)
+end
+
+
+--WITH CANCOLIDE ON--
+
+local part = script.Parent
+
+while true do
+	part.BrickColor = BrickColor.new("Really red") -- changes the part color to red
+	part.CanCollide = true
+	wait(1)
+	part.BrickColor = BrickColor.new("Really blue") -- changes the part color to blue
+	part.CanCollide = false
+	wait(1)
+end
+
+–has an error with roblox as of 6/23/22 8:45p- may be resolved
