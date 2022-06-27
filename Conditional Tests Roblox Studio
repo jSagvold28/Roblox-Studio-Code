@@ -1,0 +1,8 @@
+--Make sure output is toggled on
+			 			
+if 2 + 3 == 5 then
+	print("Two plus three is five")
+end
+
+What should happen in output
+"Two plus three is five"
