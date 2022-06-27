@@ -1,0 +1,35 @@
+--------------------
+----INSTRUCTIONS----
+--------------------
+--Make sure OUTPUT is toggled on		 		
+
+
+		
+for count = 1, 5 do
+print(count)
+end
+
+
+			 			
+for count = 1, 10, 2 do
+	print(count)
+end
+		
+for count = 1, 10, 2 do
+print(count)
+ End
+		
+local timeRemaining = 10
+
+While timeRemaining > 0
+print(“Seconds remaining: “.. timeRemaning)
+wait(1)
+timeRemaning = timeRemaning - 1
+End
+
+print(“Timer reached zero!”)
+
+FOR PRACTICE:
+
+for enterhere1 = enterhere2
+print(enterhere1)
