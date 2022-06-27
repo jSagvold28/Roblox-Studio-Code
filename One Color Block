@@ -1,0 +1,4 @@
+local MyPart = script.Parent
+while wait (1) do
+	MyPart.BrickColor = BrickColor.color here()
+end
