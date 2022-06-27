@@ -1,0 +1,4 @@
+	local cash = Instance.new("NumberValue")
+	cash.Name = "Cash" – or whatever you choose
+	cash.Value = 200 - - can change to whatever 
+	cash.Parent = leaderstats
