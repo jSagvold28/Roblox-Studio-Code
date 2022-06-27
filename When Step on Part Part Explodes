@@ -1,0 +1,17 @@
+-------------------
+----INSTRUCTIONS----
+--------------------
+
+-Make a part
+
+local part = script.Parent
+
+part.Touched:Connect(function(h)
+	local parent = h.Parent
+	if parent and parent:FindFirstChild('Humanoid') then
+		local explosion = Instance.new('Explosion')
+		explosion.BlastRadius = 60
+		explosion.ExplosionType = Enum.ExplosionType.Craters
+		explosion.Parent = part
+	end
+end)
