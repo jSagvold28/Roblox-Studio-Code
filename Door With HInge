@@ -1,0 +1,49 @@
+--------------------
+----INSTRUCTIONS----
+--------------------
+
+-Make a part then reisize to a door size
+- make a SKINNY part to make it as a hinge
+-rename the parts "Door" and "Hinge"
+-group when ready (G)
+-make a WeldConstraint
+  -Look for Part0 and click the door part
+   - look for Part1 and click the hinge
+-transparency for hinge 1
+-duplicte the hinge
+-chnage tranparency to 0
+-move the Part by the Hinge 
+-move the part ontop of the transparent Hinge
+-group them again (G)
+-make a change the Modle to "ClickToOpen"
+-make a ClickDetector on the Door iside of CLickToOpen
+-add a Script inside of the model (ClickToOpen)
+
+-------------------
+-------SCRIPT-------
+--------------------
+
+local TweenService = game:GetService("TweenService")
+local hinge = script.Parent.Hinge
+local clickDetector = script.Parent.Door.ClickDetector
+local open = true
+
+local openDoor = {}
+openDoor.CFrame = hinge.CFrame * CFrame.Angles(0, math.rad(90), 0)
+
+local closeDoor = {}
+closeDoor.CFrame = hinge.CFrame * CFrame.Angles(0, 0, 0)
+
+local tweenInfo = TweenInfo.new(1)
+local tweenOpen = TweenService:Create(hinge, tweenInfo, openDoor)
+local tweenClose = TweenService:Create(hinge, tweenInfo, closeDoor)
+
+clickDetector.MouseClick:Connect(function(player)
+	if open == true then
+		open = false
+		tweenClose:Play()
+	elseif open == false then
+		open = true
+		tweenOpen:Play()
+	end
+end)
