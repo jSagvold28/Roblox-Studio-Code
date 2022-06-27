@@ -1,0 +1,5 @@
+local part = game.Workspace.Part
+wait (3)
+part.BrickColor = BrickColor.new("Really Red")
+part.Size = Vector3.new (3,4,7)
+part.Anchored = false
