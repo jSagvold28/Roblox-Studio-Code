@@ -1,0 +1,8 @@
+local part = script.Parent
+
+while true do
+	part.BrickColor = BrickColor.new("Really red")
+	wait(1)
+	part.BrickColor = BrickColor.new("Baby blue")
+	wait(1)
+end
