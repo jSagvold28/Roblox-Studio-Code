@@ -1,0 +1,39 @@
+local x = 3 --Varible
+
+if 3 == 3 then --If Statement
+	print("YES")
+end
+
+local x = 3 --Varible
+
+if x == 3 then --If Statement
+	print("YES")
+end
+
+local x = 3 
+local y = 9
+
+if x == 3 and y == 9 then
+	print("YES BOTH ARE TRUE")
+end
+
+local x = 3 
+local y = 9
+
+if x == 3 or y == 9 then
+	print("YES BOTH ARE TRUE")
+end
+
+local Anchored = true
+
+if Anchored == true then
+	print("YES")
+end
+
+local Baseplate = game.Workspace.Baseplate
+
+
+if Baseplate.Anchored == true then
+	print("It is anchored!")
+end
+
