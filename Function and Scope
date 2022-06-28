@@ -1,0 +1,22 @@
+local function BestFunction() -- pick whatever you want for the functions
+	local BestNumber = 15
+	local FavoriteNumber = 10
+	print(BestNumber+FavoriteNumber)
+end
+
+BestFunction()
+
+local a = 2 -- not in Scope
+local function Test1()
+	a = 2 -- In Scope
+	print(a)
+end
+
+local function Test2()
+	print(a)
+end
+
+--CALLING FUNCITONS (make them go into output)--
+
+Test1()
+Test2()
