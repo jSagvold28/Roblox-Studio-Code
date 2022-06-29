@@ -1,0 +1,12 @@
+local part = script.Parent
+
+local click = part.ClickDetector
+
+local function explode()
+
+	local explosion = Instance.new("Explosion")
+	explosion.Parent = game.Workspace
+	explosion.Position = part.Position
+end
+
+click.MouseClick:Connect(explode)
