@@ -1,0 +1,16 @@
+-- Put a script called PlayerSetup inside of ServerScriptService
+
+local function onPlayerJoin(player)
+	local leaderstats = Instance.new("Folder")
+	leaderstats.Name = "leaderstats"
+	leaderstats.Parent = player
+
+
+	local gold = Instance.new("IntValue")
+	gold.Name = "" -- add a name for the leaderboard
+	gold.Value = 0 -- add value
+	gold.Parent = leaderstats
+end
+
+
+game.Players.PlayerAdded:Connect(onPlayerJoin)
