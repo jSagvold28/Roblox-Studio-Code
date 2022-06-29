@@ -1,0 +1,34 @@
+-- Add a script inside of ServerScriptService
+
+local function onPlayerJoin(player)
+	local leaderstats = Instance.new("Folder")
+	leaderstats.Name = "leaderstats"
+	leaderstats.Parent = player
+	
+	
+	local coins = Instance.new("IntValue") -- choose what ever currency system you want
+	coins.Name = "Coins"
+	coins.Value = 0 -- choose whatever amount you want the player to start off with
+	coins.Parent = leaderstats
+end
+
+
+game.Players.PlayerAdded:Connect(onPlayerJoin)
+
+
+-- Make a Part
+-- Make a script inside of the Part
+
+local part = script.Parent
+
+local function collect(otherPart)
+	local player = game.Players:FindFirstChild(otherPart.Parent.Name)
+	if player then
+		player.leaderstats.Coins.Value = player.leaderstats.Coins.Value + 1 
+		part:Destroy()
+	end
+end
+
+part.Touched:Connect(collect)
+
+--Feel free to add more points or add more value or currency system
