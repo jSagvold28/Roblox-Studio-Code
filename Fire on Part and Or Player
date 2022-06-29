@@ -1,0 +1,15 @@
+-- Make a part and call it "firePart
+-- Make a script inside of "firePart"
+
+--FOR PART ON FIRE--
+
+firepart = script.Parent
+
+function lightOnFire(otherPart)
+	local fire = Instance.new("Fire")
+	fire.Parent = firepart
+	wait(5)
+	firepart.Fire:Destroy()
+end
+
+firepart.Touched:Connect(lightOnFire())
