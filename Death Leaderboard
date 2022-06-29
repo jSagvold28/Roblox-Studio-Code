@@ -1,0 +1,40 @@
+-- Make a script inside inside of ServerScriptService
+
+local function onPlayerJoin(player)
+	local leaderstats = Instance.new("Folder")
+	leaderstats.Name = "leaderstats"
+	leaderstats.Parent = player
+
+
+	local deaths = Instance.new("IntValue")
+	deaths.Name = "Deaths"
+	deaths.Value = 0
+	deaths.Parent = leaderstats
+end
+
+game.Players.PlayerAdded:Connect(onPlayerJoin)
+
+
+game:GetService('Players').PlayerAdded:Connect(function(player)
+	player.CharacterAdded:Connect(function(character)
+		character:WaitForChild("Humanoid").Died:Connect(function()
+			player.leaderstats.Deaths.Value = player.leaderstats.Deaths.Value + 1
+		end)
+	end)
+end)
+
+IF YOU WANT TO TEST IT ON AN EXPLODING PART
+--Make a part
+--Inside of the part make a script
+
+local part = script.Parent
+
+part.Touched:Connect(function(h)
+	local parent = h.Parent
+	if parent and parent:FindFirstChild('Humanoid') then
+		local explosion = Instance.new('Explosion')
+		explosion.BlastRadius = 60
+		explosion.ExplosionType = Enum.ExplosionType.Craters
+		explosion.Parent = part
+	end
+end)
