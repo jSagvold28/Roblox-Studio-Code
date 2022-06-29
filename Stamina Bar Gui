@@ -1,0 +1,50 @@
+-- Make a ScreenGui
+-- Change the name to "StaminaGui"
+-- Size: {0, 290},{0, 96} -- Reccomended Action make the BoarderLinePixel to 5
+-- Change the name of the Frame to "Background"
+-- Add another Frame 
+-- Change Frame size to: {1, 0},{1, 0}
+-- Boarder Pixel = 0
+-- Change frame name to = StaminaDisplay
+-- Add a LocalScript
+
+
+local player = game.Players.LocalPlayer
+local character = player.Character
+
+local UserImputService = game:GetService("UserInputService")
+
+local stamina = 100
+local running = false
+
+stamina = math.clamp(stamina, 0, 100)
+
+UserImputService.InputBegan:Connect(function(imput)
+		if imput.KeyCode == Enum.KeyCode.LeftShift then -- or any key then
+		running = true 
+		character.Humanoid.WalkSpeed = 32 
+		while stamina > 0 and running do
+			stamina = stamina - 1
+			script.Parent:TweenSize(UDim2.new(stamina / 100,0,1,0), "Out", "Linear", 0)
+			wait()
+			if stamina == 0 then
+				character.Humanoid.WalkSpeed = 16
+			end
+		end
+	end
+end)
+
+UserImputService.InputEnded:Connect(function(imput)
+	if imput.KeyCode == Enum.KeyCode.LeftShift then
+		running = false
+		character.Humanoid.WalkSpeed = 16
+		while stamina < 100 and not running do
+			stamina = stamina + 1
+			script.Parent:TweenSize(UDim2.new(stamina / 100,0,1,0), "Out", "Linear", 0)
+			wait()
+			if stamina == 0 then
+				character.Humanoid.WalkSpeed = 16
+			end
+		end
+	end
+end)
