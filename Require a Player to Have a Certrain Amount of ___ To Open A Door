@@ -17,6 +17,7 @@ game.Players.PlayerAdded:Connect(onPlayerJoin)
 
 -- Make 3 parts and name the middle one called "Wall" and anchor it
 -- Make a part infront of the door and call it "PointCheck"
+-- Add a Weld into PointCheck
 -- Make it invisble
 
 local part = script.Parent
@@ -24,6 +25,11 @@ local wall = game.Workspace.Wall
 local canOpen = true
 
 WITHOUT CURRENCY DEDUCTION
+
+local part = script.Parent
+local wall = game.Workspace.Wall
+local canOpen = true
+
 
 local function lift(otherPart)
 	local partParent = otherPart.Parent
@@ -42,6 +48,9 @@ local function lift(otherPart)
 		end
 	end
 end
+
+
+part.Touched:Connect(lift)
 
 WITH CURRENCY DEDUCTION
 
