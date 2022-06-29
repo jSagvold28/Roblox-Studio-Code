@@ -1,0 +1,44 @@
+--Make a part what ever part or color
+-- Make a script inside of the part
+
+
+local part = script.Parent
+
+local speedBoost = 150 -- or whatever speed you want
+
+local function speed(bodyPart)
+	local humanoid = bodyPart.Parent:FindFirstChild('Humanoid')
+	if humanoid then
+		local currentSpeed = humanoid.WalkSpeed
+		if currentSpeed < speedBoost then
+			humanoid.WalkSpeed = speedBoost
+			wait(5) -- this is the time of your player will have speed boost
+			humanoid.WalkSpeed = currentSpeed
+		end
+	end
+end
+
+part.Touched:Connect(speed)
+
+IF YOU WANT THE PART TO DISSAPER WHEN TOUCHED:
+
+local part = script.Parent
+
+local speedBoost = 150 -- or whatever speed you want
+
+local function speed(bodyPart)
+	local humanoid = bodyPart.Parent:FindFirstChild('Humanoid')
+	if humanoid then
+		local currentSpeed = humanoid.WalkSpeed
+		if currentSpeed < speedBoost then
+			part.Transparency = 1
+			part.CanCollide = false
+			humanoid.WalkSpeed = speedBoost
+			wait(5) -- this is the time of your player will have speed boost
+			part.Transparency = 0
+			humanoid.WalkSpeed = currentSpeed
+		end
+	end
+end
+
+part.Touched:Connect(speed)
