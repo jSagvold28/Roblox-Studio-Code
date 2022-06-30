@@ -1,0 +1,14 @@
+--Make a part
+--Make a ClickDetector inside of the part
+--Then add a Script
+
+--KILL PLAYER SCRIPT--
+
+local part = script.Parent
+local click = part.ClickDetector
+
+local function onClick(player)
+	player.Character.Humanoid.Health = 0
+end
+
+click.MouseClick:Connect(onClick)
