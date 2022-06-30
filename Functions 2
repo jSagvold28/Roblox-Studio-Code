@@ -1,0 +1,26 @@
+--Make a script inside of Workspace
+
+local function my_Function(parameter)
+	print(parameter)
+end
+
+my_Function("Hello") 
+
+
+local function my_Function(para1, para2)
+	print(para1 +para2)
+end
+
+my_Function(2,5) -- the 2,5 is a adding command
+
+
+--Make a part 
+--Make a script inside of the part
+
+local myPart = game.Workspace.Part
+
+local function my_Function(part)
+	part.BrickColor = BrickColor.new('Lime green') -- use any color of your choice
+end
+
+my_Function(myPart)
