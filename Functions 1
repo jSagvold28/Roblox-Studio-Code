@@ -1,0 +1,18 @@
+--Make a script inside of Workspace
+
+local function my_Function()
+	print('This')
+	print('Is')
+	print('My')
+	print('function')
+end
+
+--usng the Funciton in the Output section
+my_Function()
+
+-- can use it many times
+my_Function()
+my_Function()
+my_Function()
+my_Function()
+my_Function()
