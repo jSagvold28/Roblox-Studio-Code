@@ -1,0 +1,15 @@
+if 2 + 3 == 5 then
+	print("Two pluse three is five!")
+end
+
+local nilVariable  -- Variable is declared but has no value, so it's nil
+local falseVariable = false  -- Variable is declared with value of false
+
+if nilVariable ~= true then
+	print(nilVariable)  -- Outputs "nil" since nil is not true
+end
+
+if falseVariable ~= true then
+	print(falseVariable)  -- Outputs "false" since false is not true
+end
+
