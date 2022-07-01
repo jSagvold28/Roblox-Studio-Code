@@ -1,0 +1,4 @@
+print("Scripting is awesome!")
+print(5+5)
+print(5*5)
+print(0.3)
