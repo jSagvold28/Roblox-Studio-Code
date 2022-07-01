@@ -1,0 +1,12 @@
+SETUP EXAMPLE
+local (varible name here) = value
+
+local Hotdogs = 4
+print(Hotdogs)
+
+local Hotdogs = 4
+local FavoriteName = "TheDevKing"
+local FavoriteDecimalPoint = 6.0
+local Hamburgers = 6
+
+print(Hotdogs + Hamburgers)
