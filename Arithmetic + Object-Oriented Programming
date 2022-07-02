@@ -1,0 +1,26 @@
+print(10+10)
+
+print(10-10)
+
+print(10*10)
+
+print(10/10)
+
+--Object Orentated Programming--
+
+local PartTransparency = 0.30 + 0.30
+
+game.Workspace.Baseplate.Transparency = PartTransparency
+
+local PartTransparency = 0.30 + 0.30
+
+local Baseplate = game.Workspace.Baseplate
+
+game.Workspace.Baseplate.Reflectance = 1
+game.Workspace.Baseplate.Material = "Wood"
+
+
+--//REVISED//--
+
+Baseplate.Material = "Wood"
+Baseplate.Anchored = false
